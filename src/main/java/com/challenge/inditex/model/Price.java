@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -20,7 +21,7 @@ public class Price {
     LocalDateTime startDate;
     LocalDateTime endDate;
     Integer priority;
-    Double price;
+    BigDecimal price;
     String curr;
     @ManyToOne(cascade = {CascadeType.ALL})
     Brand brand;
