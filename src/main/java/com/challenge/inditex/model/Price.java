@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -17,6 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Price {
     @Id
+    @Column(name = "PRICE_LIST")
     Long id;
     LocalDateTime startDate;
     LocalDateTime endDate;
