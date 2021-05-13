@@ -10,5 +10,5 @@ import java.util.List;
 
 @Repository("priceRepository")
 public interface PriceRepository extends JpaRepository<Price, Serializable> {
-    List<Price> findAllByProductIdAndBrandIdAndStartDateGreaterThanEqualAndEndDateLessThanEqual(Long productId, Long brandId, LocalDateTime date, LocalDateTime dateBis);
+    List<Price> findAllByProductIdAndBrandIdAndStartDateLessThanEqualAndEndDateGreaterThanEqual(Long productId, Long brandId, LocalDateTime date, LocalDateTime dateBis);
 }
